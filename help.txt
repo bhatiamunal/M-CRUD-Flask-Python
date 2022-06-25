@@ -1,0 +1,28 @@
+pip install virtualenv  -------------> this is initial steps to follow
+.\env\Scripts\activate  -------------> this is initial steps to follow
+pip install flask       -------------> this is initial steps to follow
+---------------------------------------------------------------
+python .\app.py         -------------> This help to run application 
+-------------------------------------------
+app.py
+-------------------------------------------
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+if __name__ =="__main__":
+    app.run(debug=True,port=8000)
+    #app.run(debug=True) #default is 5000
+--------------------------------------------
+
+create 2 folder 
+1. static
+2. templates
+
+
+---------------------------------------------------
+
+python -m pip install pymongo ------------------------------> For MongoDb

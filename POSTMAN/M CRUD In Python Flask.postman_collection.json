@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "0c1ba011-e505-4950-85ba-2d2efd201ef1",
+		"name": "M CRUD In Python Flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "munal",
+							"type": "text"
+						},
+						{
+							"key": "lname",
+							"value": "bahtia",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Add Users "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/getUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/getUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"getUsers"
+					]
+				},
+				"description": "Show Users"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/updateUsers/62b750e6d188c838c428ee6e",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sahil",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/updateUsers/62b750e6d188c838c428ee6e",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"updateUsers",
+						"62b750e6d188c838c428ee6e"
+					]
+				},
+				"description": "Update Users"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/deleteUsers/62b750e6d188c838c428ee6e",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/deleteUsers/62b750e6d188c838c428ee6e",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"deleteUsers",
+						"62b750e6d188c838c428ee6e"
+					]
+				},
+				"description": "Delete Users"
+			},
+			"response": []
+		}
+	]
+}
