@@ -30,8 +30,13 @@ def create_user( ):
             mimetype="application/json" 
         )
     except Exception as ex:
-        print(ex)
-    return "0"
+        return Response(
+            response=json.dumps(
+                {"message":"Error While getting "}
+                ),
+            status=500,
+            mimetype="application/json" 
+        )
   
 @app.route("/getUsers", methods=["GET"])
 def get_user( ):
@@ -48,8 +53,14 @@ def get_user( ):
             mimetype="application/json" 
         )
     except Exception as ex:
-        print(ex)
-    return "0"
+       return Response(
+            response=json.dumps(
+                {"message":"Error While getting Records "}
+                ),
+            status=500,
+            mimetype="application/json" 
+        )
+    
 
 
 @app.route("/updateUsers/<id>", methods=["PATCH"])
@@ -61,15 +72,20 @@ def update_user(id):
             )
         return Response(
             response=json.dumps(
-                {"message":f"{dbResponse.modified_count }user update"}
+                {"message":f"{dbResponse.modified_count } user update"}
                 ),
             status=200,
             mimetype="application/json" 
         )
 
     except Exception as ex:
-        print(ex)
-    return "0"
+        return Response(
+            response=json.dumps(
+                {"message":"Error While  Updateing "}
+                ),
+            status=500,
+            mimetype="application/json" 
+        )
 
 @app.route("/deleteUsers/<id>", methods=["DELETE"])
 def delete_user(id):
@@ -80,15 +96,20 @@ def delete_user(id):
             )
         return Response(
             response=json.dumps(
-                {"message":f"{id} is deleted. {dbResponse.deleted_count}"}
+                {"message":f"{id} is deleted. only {dbResponse.deleted_count} deleted."}
                 ),
             status=200,
             mimetype="application/json" 
         )
 
     except Exception as ex:
-        print(ex)
-    return "0"
+        return Response(
+            response=json.dumps(
+                {"message":"Error While  deleteing "}
+                ),
+            status=500,
+            mimetype="application/json" 
+        )
 
 
 '''
